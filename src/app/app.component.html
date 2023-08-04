@@ -1,0 +1,12 @@
+<div *appNot="isLogin">
+    <div class="h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 flex items-center justify-center">
+        <div class="text-white text-xl text-center">
+            <p>Welcome to new Angular Homework!</p>
+            <p>Please Login to see the content inside.</p>
+
+            <button (click)="onLoginHandler()" class="text-base bg-gradient-to-r from-cyan-500 to-blue-500 mt-3 px-7 py-2 rounded-lg">Log in</button>
+        </div>
+    </div>
+</div>
+
+<app-main [isLogin]="!isLogin" (onLoginHandler)="onLoginHandler()"></app-main>

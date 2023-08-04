@@ -1,0 +1,56 @@
+<div class="border-2 rounded-lg p-6" *ngIf="!getFromParent; else mydefault">
+    <p class="font-bold text-2xl">{{angular.subjectName}}</p>
+    <p>{{angular.description}}</p>
+    
+    <div class="flex justify-between pr-24 mt-20">
+        <ul>
+            <div class="text-2xl font-bold">We invest in the world's protential</div>
+            <li class="flex items-center">
+                <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                <p>Dynamic reports and dashboards</p>
+            </li>
+            <li class="flex items-center">
+                <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                <p>Templates for everyone</p>
+            </li>
+            <li class="flex items-center">
+                <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                <p>Development workflow</p>
+            </li>
+            <li class="flex items-center">
+                <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                <p>Limitless busines automation</p>
+            </li>
+        </ul>
+        <img src="../../../assets/images/{{angular.thumbnail}}" alt="logo" width="200px">
+    </div>
+</div>
+
+<ng-template #mydefault>
+    <div class="border-2 rounded-lg p-6">
+        <p class="font-bold text-2xl">{{getFromParent[0].subjectName}}</p>
+        <p>{{getFromParent[0].description}}</p>
+        <div class="flex justify-between pr-24 mt-20">
+            <ul>
+                <div class="text-2xl font-bold">We invest in the world's protential</div>
+                <li class="flex items-center">
+                    <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                    <p>Dynamic reports and dashboards</p>
+                </li>
+                <li class="flex items-center">
+                    <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                    <p>Templates for everyone</p>
+                </li>
+                <li class="flex items-center">
+                    <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                    <p>Development workflow</p>
+                </li>
+                <li class="flex items-center">
+                    <img src="../../../assets/checkbox.png" alt="checkbox" width="30px">
+                    <p>Limitless busines automation</p>
+                </li>
+            </ul>
+            <img src="../../../assets/images/{{getFromParent[0].thumbnail}}" alt="logo" width="200px">
+        </div>
+    </div>
+</ng-template>

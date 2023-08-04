@@ -1,0 +1,11 @@
+<div *appNot='isLogin'>
+    <div class="grid grid-cols-12 px-32 gap-6 mt-14">
+        <div class="col-span-3">
+            <app-sidebar (sendToParent)="getFromChildLeft($event)" [subject_list]="subject_list"></app-sidebar>
+            <button (click)="onLogOutHandler()" class="bg-red-500 text-white py-2 px-5 rounded-lg mt-3">Log Out</button>
+        </div>
+        <div class="col-span-9">
+            <app-content [getFromParent]="sendToChildRight" [subject_list]="subject_list"></app-content>
+        </div>
+    </div>
+</div>

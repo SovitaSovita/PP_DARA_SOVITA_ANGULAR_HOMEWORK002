@@ -1,0 +1,12 @@
+<div class="border-2 rounded-lg p-6">
+    <h4 class="font-semibold text-lg">My Favorite Subject</h4>
+
+    <ng-container *ngFor="let item of subject_list | customSort:'subjectName'">
+        <button (click)="onClickTab(item.subjectName)" class="bg-slate-100 rounded-lg py-2.5 px-4 mt-2 w-full">
+            <div class="flex items-center">
+                <img src="../../../assets/images/{{item.thumbnail}}" alt="logo" width="30px">
+                <p class="ml-1.5">{{item.subjectName}}</p>
+            </div>
+        </button>
+    </ng-container>
+</div>
